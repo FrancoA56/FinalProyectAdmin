@@ -1,5 +1,5 @@
 import jsonServerProvider from "ra-data-json-server";
-const URL = "http://localhost:3001/api"
+const URL = process.env.SERVER_URL;
 
 export const dataProvider = jsonServerProvider(
   URL
