@@ -1,6 +1,6 @@
 import jsonServerProvider from "ra-data-json-server";
-const URL = process.env.SERVER_URL;
+const apiUrl = process.env.SERVER_URL;
 
 export const dataProvider = jsonServerProvider(
-  URL
+  apiUrl
 );
