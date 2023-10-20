@@ -1,26 +1,24 @@
-import { List, Datagrid, TextField } from 'react-admin';
-import { useParams } from 'react-router-dom';
+import { List, Datagrid, TextField, DateField } from "react-admin";
+import UserFilter from "./userFilters";
 
-const UserList = () => {
-    const { userId } = useParams();
-    return (
-        <List resource="user/users" filter={{ userId }}>
-            <Datagrid rowClick="edit">
-                <TextField source="email" />
-                <TextField source="password" />
-                <TextField source="name" />
-                <TextField source="logo" />
-                <TextField source="about" />
-                <TextField source="firstname" />
-                <TextField source="lastname" />
-                <TextField source="country" />
-                <TextField source="city" />
-                <TextField source="zipcode" />
-                <TextField source="createdAt" />
-                <TextField source="isDisabled" />
-            </Datagrid>
-        </List>
-    );
+const UserList = (props) => {
+  return (
+    <List {...props} filters={<UserFilter />}>
+      <Datagrid rowClick="edit">
+        <TextField source="name" />
+        <TextField source="email" />
+        <TextField source="logo" />
+        <TextField source="about" />
+        <TextField source="firstname" />
+        <TextField source="lastname" />
+        <TextField source="country" />
+        <TextField source="city" />
+        <TextField source="zipcode" />
+        <TextField source="isDisabled" />
+        <DateField source="createdAt" showTime />
+      </Datagrid>
+    </List>
+  );
 };
 
 export default UserList;
