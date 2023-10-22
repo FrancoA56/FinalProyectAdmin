@@ -1,4 +1,4 @@
-import { List, Datagrid, TextField, DateField } from "react-admin";
+import { List, Datagrid, TextField, DateField, UrlField } from "react-admin";
 import PresetFilter from "./presetFilter";
 
 const PresetList = (props) => {
@@ -11,6 +11,8 @@ const PresetList = (props) => {
         <TextField source="color" />
         <TextField source="type" />
         <TextField source="category" />
+        <TextField source="images" />
+        <UrlField source="url" />
         <DateField source="release" showTime />
         <TextField source="isDisabled" />
       </Datagrid>
