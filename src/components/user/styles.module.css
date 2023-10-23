@@ -1,0 +1,7 @@
+/* Estilo para aplicar el efecto de elipsis a los campos de texto */
+.field-logo .text-value {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100px; /* Ajusta este valor según tus preferencias */
+}

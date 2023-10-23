@@ -1,10 +1,6 @@
 import { List, Datagrid, TextField, DateField } from "react-admin";
 import UserFilter from "./userFilters";
 
-const truncateText = (text, maxLength) => {
-  return text.length > maxLength ? text.slice(0, maxLength) + "..." : text;
-};
-
 const UserList = (props) => {
   return (
     <List {...props} filters={<UserFilter />}>
@@ -19,9 +15,7 @@ const UserList = (props) => {
         <TextField source="zipcode" />
         <TextField source="isDisabled" />
         <DateField source="createdAt" showTime />
-        <TextField label="Logo" source="logo">
-          {record => truncateText(record.logo, 30)}
-        </TextField>
+        <TextField label="Logo" source="logo"/>
       </Datagrid>
     </List>
   );
