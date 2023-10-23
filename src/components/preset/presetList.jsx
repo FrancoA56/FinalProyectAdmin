@@ -11,7 +11,7 @@ const PresetList = (props) => {
         <TextField source="color" />
         <TextField source="type" />
         <TextField source="category" />
-        <TextField source="images" />
+        <UrlField source="images" />
         <UrlField source="url" />
         <DateField source="release" showTime />
         <TextField source="isDisabled" />
