@@ -1,5 +1,6 @@
-import { List, Datagrid, TextField, DateField, UrlField } from "react-admin";
+import { List, Datagrid, TextField, DateField } from "react-admin";
 import PresetFilter from "./presetFilter";
+import UrlCustomField from "../../utils/UrlCustomField/UrlCustomField";
 
 const PresetList = (props) => {
   return (
@@ -11,9 +12,9 @@ const PresetList = (props) => {
         <TextField source="color" />
         <TextField source="type" />
         <TextField source="category" />
-        <TextField source="images" />
-        <UrlField source="url" />
-        <DateField source="release" showTime />
+        <UrlCustomField source="images" />
+        <UrlCustomField source="url" />
+        <DateField source="release" />
         <TextField source="isDisabled" />
       </Datagrid>
     </List>

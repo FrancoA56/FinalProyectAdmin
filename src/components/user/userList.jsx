@@ -1,9 +1,6 @@
 import { List, Datagrid, TextField, DateField } from "react-admin";
 import UserFilter from "./userFilters";
-
-const truncateText = (text, maxLength) => {
-  return text.length > maxLength ? text.slice(0, maxLength) + "..." : text;
-};
+import TextCustomField from "../../utils/textCustomField/TextCustomField";
 
 const UserList = (props) => {
   return (
@@ -11,17 +8,15 @@ const UserList = (props) => {
       <Datagrid rowClick="edit">
         <TextField source="name" />
         <TextField source="email" />
-        <TextField source="about" />
         <TextField source="firstname" />
         <TextField source="lastname" />
         <TextField source="country" />
         <TextField source="city" />
         <TextField source="zipcode" />
+        <TextCustomField label="Logo" source="logo"/>
+        <TextCustomField source="about" />
         <TextField source="isDisabled" />
-        <DateField source="createdAt" showTime />
-        <TextField label="Logo" source="logo">
-          {record => truncateText(record.logo, 30)}
-        </TextField>
+        <DateField source="createdAt" />
       </Datagrid>
     </List>
   );
