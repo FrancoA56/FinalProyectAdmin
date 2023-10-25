@@ -37,7 +37,7 @@ const PresetEdit = (props) => {
 
     return (
         <Edit {...props}>
-            <SimpleForm>
+            <SimpleForm >
                 <TextInput source="name" label="Name" />
                 <NumberInput source="price" label="Price" />
                 <SelectInput source="color" label="Color" choices={colorChoices} />

@@ -11,7 +11,7 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import InventoryIcon from '@mui/icons-material/Inventory';
 export const App = () => (
   <Admin dataProvider={dataProvider} authProvider={authProvider}>
-    <Resource name="user/users" list={UserList} icon={PeopleIcon} />
+    <Resource name="user/admin" list={UserList} icon={PeopleIcon} />
     <Resource name="preset" list={PresetList} create={PresetCreate} edit={PresetEdit} icon={InventoryIcon}/>
     <Resource name="shop/invoice" list={InvoiceList} icon={ShoppingCartIcon}/>
   </Admin>
