@@ -1,4 +1,4 @@
-import { Admin, Resource, MenuItemLink } from "react-admin";
+import { Admin, Resource } from "react-admin";
 import UserList from "./components/user/userList";
 import PresetList from "./components/preset/presetList";
 import PresetCreate from "./components/preset/presetCreate";
