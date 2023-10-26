@@ -11,7 +11,6 @@ import {
 
 const Presets = () => {
     const { data } = useListContext();
-    console.log(data);
     return (
         <ul>
             {data.map(backlink => (
@@ -21,12 +20,11 @@ const Presets = () => {
     );
 };
 
-
 const InvoiceList = (props) => {
     return (
         <List {...props}>
-            <Datagrid >
-                <TextField source="id" label="ID" />
+            <Datagrid rowClick="edit">
+                <TextField source="id" />
                 <NumberField source="totalAmount" label="Total Amount" />
                 <TextField source="paymentMethod" label="Payment Method" />
                 <BooleanField source="isPaid" label="Is Paid" />
@@ -41,7 +39,5 @@ const InvoiceList = (props) => {
         </List>
     );
 };
-
-
 
 export default InvoiceList;

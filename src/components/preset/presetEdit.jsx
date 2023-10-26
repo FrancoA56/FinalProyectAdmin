@@ -30,7 +30,7 @@ const colorChoices = [
     { id: 'blue', name: 'Blue' },
     { id: 'green', name: 'Green' },
     { id: 'brown', name: 'Brown' },
-    { id: 'black', name: 'Black' },
+    { id: 'red', name: 'Red' },
 ]
 
 const PresetEdit = (props) => {
