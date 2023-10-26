@@ -6,7 +6,8 @@ import {
     BooleanField,
     DateField,
     useListContext,
-    ArrayField
+    ArrayField,
+    SelectField
 } from 'react-admin';
 
 const Presets = () => {
@@ -20,6 +21,11 @@ const Presets = () => {
     );
 };
 
+const paymentStatusChoices = [
+    { id: true, name: 'Completed' },
+    { id: false, name: 'Pending' },
+];
+
 const InvoiceList = (props) => {
     return (
         <List {...props}>
@@ -27,7 +33,7 @@ const InvoiceList = (props) => {
                 <TextField source="id" />
                 <NumberField source="totalAmount" label="Total Amount" />
                 <TextField source="paymentMethod" label="Payment Method" />
-                <BooleanField source="isPaid" label="Is Paid" />
+                <SelectField source="isPaid" label="Payment Status" choices={paymentStatusChoices} />
                 <TextField source="paymentId" label="Payment ID" />
                 <DateField source="createdAt" label="Created At" showTime />
                 <TextField source="userEmail" label="User Email" />

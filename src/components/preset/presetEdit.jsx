@@ -6,7 +6,8 @@ import {
     ArrayInput,
     BooleanInput,
     SelectInput,
-    NumberInput
+    NumberInput,
+    required
 } from "react-admin";
 
 const typeChoices = [
@@ -15,13 +16,13 @@ const typeChoices = [
     { id: 'cart', name: 'Cart' },
     { id: 'shop', name: 'Shop' },
     { id: 'detail', name: 'Detail' },
-    { id: 'profile', name: 'Profile' },
+    { id: 'profile', name: 'Profile' }
 ];
 
 const categoryChoices = [
     { id: 'basic', name: 'Basic' },
     { id: 'medium', name: 'Medium' },
-    { id: 'premium', name: 'Premium' },
+    { id: 'premium', name: 'Premium' }
 ]
 
 const colorChoices = [
@@ -30,7 +31,7 @@ const colorChoices = [
     { id: 'blue', name: 'Blue' },
     { id: 'green', name: 'Green' },
     { id: 'brown', name: 'Brown' },
-    { id: 'red', name: 'Red' },
+    { id: 'red', name: 'Red' }
 ]
 
 const PresetEdit = (props) => {
@@ -40,9 +41,18 @@ const PresetEdit = (props) => {
             <SimpleForm >
                 <TextInput source="name" label="Name" />
                 <NumberInput source="price" label="Price" />
-                <SelectInput source="color" label="Color" choices={colorChoices} />
-                <SelectInput source="type" label="Type" choices={typeChoices} />
-                <SelectInput source="category" label="Category" choices={categoryChoices} />
+                <SelectInput source="color"
+                    label="Color" 
+                    choices={colorChoices}
+                    required />
+                <SelectInput source="type"
+                    label="Type"
+                    choices={typeChoices}
+                    required />
+                <SelectInput source="category"
+                    label="Category"
+                    choices={categoryChoices}
+                    required />
                 <ArrayInput source="images" label="Images">
                     <SimpleFormIterator>
                         <TextInput />
