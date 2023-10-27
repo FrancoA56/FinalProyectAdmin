@@ -1,4 +1,4 @@
-import { List, Datagrid, TextField, DateField } from "react-admin";
+import { List, Datagrid, TextField, DateField, BooleanField } from "react-admin";
 import UserFilter from "./userFilters";
 import TextCustomField from "../../utils/textCustomField/TextCustomField";
 
@@ -15,7 +15,7 @@ const UserList = (props) => {
         <TextField source="zipcode" />
         <TextCustomField label="Logo" source="logo"/>
         <TextCustomField source="about" />
-        <TextField source="isDisabled" />
+        <BooleanField source="isDisabled" />
         <DateField source="createdAt" />
       </Datagrid>
     </List>
