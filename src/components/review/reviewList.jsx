@@ -5,6 +5,7 @@ import {
 } from 'react-admin';
 
 import RatingField from './ratingField';
+import TextCustomField from "../../utils/textCustomField/TextCustomField";
 
 const ReviewList = (props) => {
     return (
@@ -15,7 +16,7 @@ const ReviewList = (props) => {
                 <TextField source="email" label="Email" />
                 <TextField source="preset.name" label="Preset" />
                 <RatingField source="rating" label="Rating" />
-                <TextField source="message" label="Message" />
+                <TextCustomField source="message" label="Message" />
             </Datagrid>
         </List>
     )
